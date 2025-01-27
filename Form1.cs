@@ -57,6 +57,7 @@ namespace SimpleApp
     private System.Windows.Forms.CheckBox RunContCheckBox;
     private System.Windows.Forms.Button RunOnceButton;
     private CogRecordDisplay cogRecordDisplay1;
+    private Button btnRunJob2;
     private System.ComponentModel.IContainer components;
 
     public Form1()
@@ -89,7 +90,7 @@ namespace SimpleApp
 
       // Depersist the QuickBuild session
       myJobManager = (CogJobManager)CogSerializer.LoadObjectFromFile(
-          Environment.GetEnvironmentVariable("VPRO_ROOT") + "\\Samples\\Programming\\QuickBuild\\mySavedQB.vpp");
+          @"C:\Users\cjewell\OneDrive - Cognex Corporation\Documents\Abbott\VPro Help\mySavedQB.vpp");
       myJob = myJobManager.Job(0);
       myIndependentJob = myJob.OwnedIndependent;
 
@@ -123,7 +124,7 @@ namespace SimpleApp
       if (topRecord == null) return;
 
       // Assume that the required "count" record is present, and go get it.
-      tmpRecord = topRecord.SubRecords[@"Tools.Item[""CogBlobTool1""].CogBlobTool.Results.GetBlobs().Count"];
+      tmpRecord = topRecord.SubRecords[@"PostedItem1"];
       if (tmpRecord != null)
       {
         int count = (int)tmpRecord.Content;
@@ -169,91 +170,112 @@ namespace SimpleApp
     /// </summary>
     private void InitializeComponent()
     {
-      this.components = new System.ComponentModel.Container();
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-      this.Label1 = new System.Windows.Forms.Label();
-      this.myCountText = new System.Windows.Forms.TextBox();
-      this.SampleTextBox = new System.Windows.Forms.TextBox();
-      this.timer1 = new System.Windows.Forms.Timer(this.components);
-      this.RunContCheckBox = new System.Windows.Forms.CheckBox();
-      this.RunOnceButton = new System.Windows.Forms.Button();
-      this.cogRecordDisplay1 = new Cognex.VisionPro.CogRecordDisplay();
-      ((System.ComponentModel.ISupportInitialize)(this.cogRecordDisplay1)).BeginInit();
-      this.SuspendLayout();
-      // 
-      // Label1
-      // 
-      this.Label1.Location = new System.Drawing.Point(24, 128);
-      this.Label1.Name = "Label1";
-      this.Label1.Size = new System.Drawing.Size(40, 16);
-      this.Label1.TabIndex = 4;
-      this.Label1.Text = "Count:";
-      // 
-      // myCountText
-      // 
-      this.myCountText.Location = new System.Drawing.Point(40, 152);
-      this.myCountText.Name = "myCountText";
-      this.myCountText.ReadOnly = true;
-      this.myCountText.Size = new System.Drawing.Size(64, 20);
-      this.myCountText.TabIndex = 3;
-      // 
-      // SampleTextBox
-      // 
-      this.SampleTextBox.Location = new System.Drawing.Point(432, 16);
-      this.SampleTextBox.Multiline = true;
-      this.SampleTextBox.Name = "SampleTextBox";
-      this.SampleTextBox.ReadOnly = true;
-      this.SampleTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.SampleTextBox.Size = new System.Drawing.Size(288, 184);
-      this.SampleTextBox.TabIndex = 5;
-      // 
-      // timer1
-      // 
-      this.timer1.Interval = 50;
-      // 
-      // RunContCheckBox
-      // 
-      this.RunContCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
-      this.RunContCheckBox.Location = new System.Drawing.Point(16, 56);
-      this.RunContCheckBox.Name = "RunContCheckBox";
-      this.RunContCheckBox.Size = new System.Drawing.Size(96, 32);
-      this.RunContCheckBox.TabIndex = 2;
-      this.RunContCheckBox.Text = "Run Continuous";
-      this.RunContCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-      this.RunContCheckBox.CheckedChanged += new System.EventHandler(this.RunContCheckBox_CheckedChanged);
-      // 
-      // RunOnceButton
-      // 
-      this.RunOnceButton.Location = new System.Drawing.Point(16, 16);
-      this.RunOnceButton.Name = "RunOnceButton";
-      this.RunOnceButton.Size = new System.Drawing.Size(96, 32);
-      this.RunOnceButton.TabIndex = 1;
-      this.RunOnceButton.Text = "Run Once";
-      this.RunOnceButton.Click += new System.EventHandler(this.RunOnceButton_Click);
-      // 
-      // cogRecordDisplay1
-      // 
-      this.cogRecordDisplay1.Location = new System.Drawing.Point(118, 20);
-      this.cogRecordDisplay1.Name = "cogRecordDisplay1";
-      this.cogRecordDisplay1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("cogRecordDisplay1.OcxState")));
-      this.cogRecordDisplay1.Size = new System.Drawing.Size(308, 195);
-      this.cogRecordDisplay1.TabIndex = 6;
-      // 
-      // Form1
-      // 
-      this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-      this.ClientSize = new System.Drawing.Size(768, 238);
-      this.Controls.Add(this.cogRecordDisplay1);
-      this.Controls.Add(this.RunContCheckBox);
-      this.Controls.Add(this.RunOnceButton);
-      this.Controls.Add(this.SampleTextBox);
-      this.Controls.Add(this.myCountText);
-      this.Controls.Add(this.Label1);
-      this.Name = "Form1";
-      this.Text = "QuickBuild Sample Application";
-      ((System.ComponentModel.ISupportInitialize)(this.cogRecordDisplay1)).EndInit();
-      this.ResumeLayout(false);
-      this.PerformLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.Label1 = new System.Windows.Forms.Label();
+            this.myCountText = new System.Windows.Forms.TextBox();
+            this.SampleTextBox = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.RunContCheckBox = new System.Windows.Forms.CheckBox();
+            this.RunOnceButton = new System.Windows.Forms.Button();
+            this.cogRecordDisplay1 = new Cognex.VisionPro.CogRecordDisplay();
+            this.btnRunJob2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.cogRecordDisplay1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // Label1
+            // 
+            this.Label1.Location = new System.Drawing.Point(18, 143);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(40, 16);
+            this.Label1.TabIndex = 4;
+            this.Label1.Text = "Count:";
+            // 
+            // myCountText
+            // 
+            this.myCountText.Location = new System.Drawing.Point(34, 167);
+            this.myCountText.Name = "myCountText";
+            this.myCountText.ReadOnly = true;
+            this.myCountText.Size = new System.Drawing.Size(64, 20);
+            this.myCountText.TabIndex = 3;
+            // 
+            // SampleTextBox
+            // 
+            this.SampleTextBox.Location = new System.Drawing.Point(432, 16);
+            this.SampleTextBox.Multiline = true;
+            this.SampleTextBox.Name = "SampleTextBox";
+            this.SampleTextBox.ReadOnly = true;
+            this.SampleTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.SampleTextBox.Size = new System.Drawing.Size(288, 184);
+            this.SampleTextBox.TabIndex = 5;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 50;
+            // 
+            // RunContCheckBox
+            // 
+            this.RunContCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.RunContCheckBox.Location = new System.Drawing.Point(16, 92);
+            this.RunContCheckBox.Name = "RunContCheckBox";
+            this.RunContCheckBox.Size = new System.Drawing.Size(96, 32);
+            this.RunContCheckBox.TabIndex = 2;
+            this.RunContCheckBox.Text = "Run Continuous";
+            this.RunContCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RunContCheckBox.CheckedChanged += new System.EventHandler(this.RunContCheckBox_CheckedChanged);
+            // 
+            // RunOnceButton
+            // 
+            this.RunOnceButton.Location = new System.Drawing.Point(16, 16);
+            this.RunOnceButton.Name = "RunOnceButton";
+            this.RunOnceButton.Size = new System.Drawing.Size(96, 32);
+            this.RunOnceButton.TabIndex = 1;
+            this.RunOnceButton.Text = "Run Job 1";
+            this.RunOnceButton.Click += new System.EventHandler(this.RunOnceButton_Click);
+            // 
+            // cogRecordDisplay1
+            // 
+            this.cogRecordDisplay1.ColorMapLowerClipColor = System.Drawing.Color.Black;
+            this.cogRecordDisplay1.ColorMapLowerRoiLimit = 0D;
+            this.cogRecordDisplay1.ColorMapPredefined = Cognex.VisionPro.Display.CogDisplayColorMapPredefinedConstants.None;
+            this.cogRecordDisplay1.ColorMapUpperClipColor = System.Drawing.Color.Black;
+            this.cogRecordDisplay1.ColorMapUpperRoiLimit = 1D;
+            this.cogRecordDisplay1.DoubleTapZoomCycleLength = 2;
+            this.cogRecordDisplay1.DoubleTapZoomSensitivity = 2.5D;
+            this.cogRecordDisplay1.Location = new System.Drawing.Point(118, 20);
+            this.cogRecordDisplay1.MouseWheelMode = Cognex.VisionPro.Display.CogDisplayMouseWheelModeConstants.Zoom1;
+            this.cogRecordDisplay1.MouseWheelSensitivity = 1D;
+            this.cogRecordDisplay1.Name = "cogRecordDisplay1";
+            this.cogRecordDisplay1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("cogRecordDisplay1.OcxState")));
+            this.cogRecordDisplay1.Size = new System.Drawing.Size(308, 195);
+            this.cogRecordDisplay1.TabIndex = 6;
+            // 
+            // btnRunJob2
+            // 
+            this.btnRunJob2.Location = new System.Drawing.Point(16, 54);
+            this.btnRunJob2.Name = "btnRunJob2";
+            this.btnRunJob2.Size = new System.Drawing.Size(96, 32);
+            this.btnRunJob2.TabIndex = 7;
+            this.btnRunJob2.Text = "Run Job 2";
+            this.btnRunJob2.UseVisualStyleBackColor = true;
+            this.btnRunJob2.Click += new System.EventHandler(this.btnRunJob2_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(768, 238);
+            this.Controls.Add(this.btnRunJob2);
+            this.Controls.Add(this.cogRecordDisplay1);
+            this.Controls.Add(this.RunContCheckBox);
+            this.Controls.Add(this.RunOnceButton);
+            this.Controls.Add(this.SampleTextBox);
+            this.Controls.Add(this.myCountText);
+            this.Controls.Add(this.Label1);
+            this.Name = "Form1";
+            this.Text = "QuickBuild Sample Application";
+            ((System.ComponentModel.ISupportInitialize)(this.cogRecordDisplay1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
     }
     #endregion
@@ -279,7 +301,7 @@ namespace SimpleApp
     {
       try
       {
-        myJobManager.Run();
+        myJobManager.Job(0).Run();
       }
       catch (Exception ex)
       {
@@ -287,7 +309,19 @@ namespace SimpleApp
       }
     }
 
-    private void RunContCheckBox_CheckedChanged(object sender, System.EventArgs e)
+    private void btnRunJob2_Click(object sender, EventArgs e)
+    {
+      try
+      {
+        myJobManager.Job(1).Run();
+      }
+      catch (Exception ex)
+      {
+        MessageBox.Show(ex.Message);
+      }
+    }
+
+        private void RunContCheckBox_CheckedChanged(object sender, System.EventArgs e)
     {
       if (RunContCheckBox.Checked)
       {
@@ -313,6 +347,6 @@ namespace SimpleApp
         }
         RunOnceButton.Enabled = true;
       }
+    }        
     }
-  }
 }

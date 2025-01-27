@@ -1,0 +1,11 @@
+C:\Users\cjewell\source\repos\SimpleApp\bin\x64\Debug\SimpleApp.exe.config
+C:\Users\cjewell\source\repos\SimpleApp\bin\x64\Debug\SimpleApp.exe
+C:\Users\cjewell\source\repos\SimpleApp\bin\x64\Debug\SimpleApp.pdb
+C:\Users\cjewell\source\repos\SimpleApp\obj\x64\Debug\SimpleApp.csproj.AssemblyReference.cache
+C:\Users\cjewell\source\repos\SimpleApp\obj\x64\Debug\SimpleApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\cjewell\source\repos\SimpleApp\obj\x64\Debug\SimpleApp.exe.config
+C:\Users\cjewell\source\repos\SimpleApp\obj\x64\Debug\SimpleApp.Form1.resources
+C:\Users\cjewell\source\repos\SimpleApp\obj\x64\Debug\SimpleApp.csproj.GenerateResource.cache
+C:\Users\cjewell\source\repos\SimpleApp\obj\x64\Debug\SimpleApp.csproj.CoreCompileInputs.cache
+C:\Users\cjewell\source\repos\SimpleApp\obj\x64\Debug\SimpleApp.exe
+C:\Users\cjewell\source\repos\SimpleApp\obj\x64\Debug\SimpleApp.pdb
