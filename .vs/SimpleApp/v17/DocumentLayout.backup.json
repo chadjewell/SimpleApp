@@ -7,11 +7,7 @@
       "RelativeMoniker": "D:0:0:{16621E1D-BA22-4B5D-A213-9ACEAA6E4E93}|SimpleApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{16621E1D-BA22-4B5D-A213-9ACEAA6E4E93}|SimpleApp.csproj|C:\\Users\\cjewell\\source\\repos\\SimpleApp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-=======
       "AbsoluteMoniker": "D:0:0:{16621E1D-BA22-4B5D-A213-9ACEAA6E4E93}|SimpleApp.csproj|c:\\users\\cjewell\\source\\repos\\simpleapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
->>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{16621E1D-BA22-4B5D-A213-9ACEAA6E4E93}|SimpleApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -32,28 +28,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\cjewell\\source\\repos\\SimpleApp\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-<<<<<<< Updated upstream
-              "ViewState": "AQIAAD8AAAAAAAAAAAAUwFgAAABYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T17:11:38.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\cjewell\\source\\repos\\SimpleApp\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\cjewell\\source\\repos\\SimpleApp\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T16:58:13.301Z"
-=======
-              "ViewState": "AgIAAG8AAAAAAAAAAAAAAIUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFIBAAAAAAAAAAAAAHIBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-26T16:10:31.575Z",
               "EditorCaption": ""
@@ -69,7 +44,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-27T16:58:13.301Z",
               "EditorCaption": " [Design]"
->>>>>>> Stashed changes
             }
           ]
         }
